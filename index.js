@@ -8,6 +8,11 @@ prompt.start();
 
 function upload(receiver, to, data, release, content, file, callback) {
   var subpath = file.subpath;
+  if (data['subOnly']) { //不包含父目录
+    release = release.split(path.sep);
+    release = release.shift();
+    release = release.join(path.sep);
+  }
   data['to'] = _(path.join(to, release));
   fis.util.upload(
       //url, request options, post data, file
