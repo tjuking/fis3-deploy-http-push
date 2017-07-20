@@ -1,6 +1,6 @@
 {
   "name": "fis3-deploy-http-push-zrb",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "fis3 deploy http-push plugin for zrb",
   "main": "index.js",
   "scripts": {

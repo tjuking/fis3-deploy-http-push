@@ -7,7 +7,7 @@ FIS 默认的部署插件，提供本地部署以及远程upload部署能力。
 全局安装或者本地安装都可以。
 
 ```
-npm install fis3-deploy-http-push --save-dev
+npm install fis3-deploy-http-push-zrb --save-dev
 ```
 
 ## 使用方法
@@ -16,7 +16,7 @@ npm install fis3-deploy-http-push --save-dev
 
 ```javascript
 fis.match('*.js', {
-    deploy: fis.plugin('http-push', {
+    deploy: fis.plugin('http-push-zrb', {
         //如果配置了receiver，fis会把文件逐个post到接收端上
         receiver: 'http://www.example.com:8080/receiver.php',
         //这个参数会跟随post请求一起发送
@@ -24,6 +24,7 @@ fis.match('*.js', {
         // 附加参数, 后端通过 $_POST['xx'] 获取
         // 如果 data 中 含有 to 这个 key, 那么上面那个to参数会覆盖掉data里面的to
         data: {
+            subOnly: false, //如果设置为true则支持传输子目录
             token : 'abcdefghijk',
             user : 'maxming',
             uid : 1
@@ -67,7 +68,7 @@ fis.match('**', {
           token: fis.get('project.token')
         }
       };
-      require('fis3-deploy-http-push').apply(this, arguments);
+      require('fis3-deploy-http-push-zrb').apply(this, arguments);
     }
   ]
 });
