@@ -1,7 +1,7 @@
 {
-  "name": "fis3-deploy-http-push",
+  "name": "fis3-deploy-http-push-zrb",
   "version": "2.0.6",
-  "description": "fis3 deploy http-push plugin",
+  "description": "fis3 deploy http-push plugin for zrb",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,15 +10,21 @@
     "fis",
     "fis-plus",
     "fis3",
-    "deploy"
+    "deploy",
+    "zrb",
+    "subOnly"
   ],
-  "author": "FIS",
-  "license": "BSD",
+  "author": "FIS tjuking zrb",
+  "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fex-team/fis3-deploy-http-push.git"
+    "url": "git+https://github.com/tjuking/fis3-deploy-http-push-zrb.git"
   },
   "dependencies": {
     "prompt": "1.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/tjuking/fis3-deploy-http-push-zrb/issues"
+  },
+  "homepage": "https://github.com/tjuking/fis3-deploy-http-push-zrb#readme"
 }
